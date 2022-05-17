@@ -1,5 +1,6 @@
 {
-  "name": "photolib-cli",
+  "name": "mediamanager-cli",
+  "description": "CLI for uploading files to MediaManager",
   "version": "0.1.0",
   "main": "index.js",
   "repository": {
@@ -16,43 +17,43 @@
     "node": ">=7.6.0"
   },
   "dependencies": {
-    "commander": "^7.2.0",
-    "inquirer": "^8.0.0",
+    "axios": "^0.27.2",
+    "commander": "^9.2.0",
+    "form-data": "^4.0.0",
+    "inquirer": "^8.2.4",
     "is-image": "^3.0.0",
     "is-video": "^1.0.1",
-    "node-fetch": "^2.6.1",
-    "photolib-types": "file:../photolib-types",
-    "ramda": "^0.27.1",
+    "mediamanager-types": "file:../mediaManager-types",
+    "ramda": "^0.28.0",
     "sha1": "^1.1.1",
-    "form-data": "^4.0.0",
-    "ts-node": "^9.1.1"
+    "ts-node": "^10.7.0"
   },
   "devDependencies": {
-    "@types/node": "^15.0.2",
-    "@types/ramda": "^0.27.40",
-    "chai": "^4.3.4",
-    "mocha": "^8.4.0",
-    "rewire": "^5.0.0",
-    "typescript": "4.2.4",
-    "@typescript-eslint/eslint-plugin": "^4.22.1",
-    "@typescript-eslint/parser": "^4.22.1",
+    "@types/node": "^17.0.34",
+    "@types/ramda": "^0.28.12",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.26.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-chai-expect": "^2.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^33.1.0",
-    "eslint-plugin-json": "^3.0.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-mocha": "^8.1.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-chai-expect": "^3.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.2.9",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-mocha": "^10.0.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-sonarjs": "^0.7.0",
-    "eslint-plugin-unicorn": "^31.0.0"
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-sonarjs": "^0.13.0",
+    "eslint-plugin-unicorn": "^42.0.0",
+    "mocha": "^10.0.0",
+    "rewire": "^6.0.0",
+    "typescript": "4.6.4"
   },
   "scripts": {
     "lint": "eslint src",
     "test": "mocha",
-    "scan": "ts-node src/index.ts -- scan .\\test\\folder"
+    "scan": "ts-node src/index.ts -- scan .\\tests\\folder"
   }
 }

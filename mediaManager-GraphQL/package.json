@@ -1,23 +1,23 @@
 {
-  "name": "photolib-graphql",
+  "name": "mediamanager-graphql",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "graphql": "^15.5.0",
-    "@graphql-codegen/cli": "1.21.4"
+
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "graphql-codegen --config codegen.yml"
   },
   "devDependencies": {
-    "@graphql-codegen/typescript": "1.22.0",
-    "@graphql-codegen/typescript-operations": "1.17.16",
-    "@graphql-codegen/typescript-resolvers": "1.19.1",
-    "@graphql-codegen/typescript-mongodb": "1.19.0",
-    "@graphql-codegen/cli": "1.15.4"
+    "@graphql-codegen/typescript": "2.4.8",
+    "@graphql-codegen/typescript-operations": "2.3.5",
+    "@graphql-codegen/typescript-resolvers": "2.6.1",
+    "@graphql-codegen/typescript-mongodb": "2.3.6",
+    "graphql": "^16.3.0",
+    "@graphql-codegen/cli": "2.6.2"
   }
 }

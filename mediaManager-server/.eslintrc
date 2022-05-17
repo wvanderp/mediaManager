@@ -1,35 +1,79 @@
 {
-  "parser": "babel-eslint",
-  "root": true,
   "env": {
     "browser": true,
-    "node": true,
-    "es6": true,
-    "mocha": true
+    "es6": true
   },
-  "globals": {
-    "wrapStore": true
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      },
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ],
+        "moduleDirectory": [
+          "node_modules",
+          "src/"
+        ]
+      }
+    },
+    "polyfills": [
+      "Number.parseInt"
+    ],
+    "jsdoc": {
+      "mode": "typescript"
+    }
   },
   "plugins": [
-    "@typescript-eslint",
     "jsx-a11y",
-    "jsdoc",
-    "mocha",
-    "chai-expect",
+    "react",
     "sonarjs",
-    "unicorn"
+    "@typescript-eslint",
+    "unicorn",
+    "react-hooks"
   ],
   "extends": [
-    "airbnb-base",
-    "plugin:@typescript-eslint/eslint-recommended",
+    "airbnb",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:jsdoc/recommended",
-    "plugin:compat/recommended",
-    "plugin:mocha/recommended",
-    "plugin:chai-expect/recommended",
+    "plugin:react/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:react-hooks/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*Spec.ts",
+        "*Spec.xts"
+      ],
+      "rules": {
+        // Mocha doesn’t like it when we use arrows
+        // https://mochajs.org/#arrow-functions
+        "prefer-arrow-callback": "off",
+        "func-names": "off",
+        // There are no function calls in mocha so this rule thinks the file does nothing. But mocha calls the file
+        "no-unused-expressions": "off",
+        // Any is used to mock some vars and it gives warnings about it that are unwanted
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
   ],
   "rules": {
     "indent": [
@@ -39,10 +83,32 @@
         "SwitchCase": 1
       }
     ],
+    "no-unused-vars": "warn",
+    // Git fixes this issue by automatedly change the brake line type when pushing the local branches
+    "linebreak-style": "off",
+    "no-undef": "warn",
+    // Underscores are used to denote private functions and variables
+    "no-underscore-dangle": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    // checks if the imports have the right extension
+    // typescript doesn’t like when we add extensions.
+    "import/extensions": "off",
     "comma-dangle": [
       "error",
       "never"
     ],
+    "no-plusplus": "off",
+    "object-curly-spacing": "off",
+    // sets the file naming style of the project
     "unicorn/filename-case": [
       "error",
       {
@@ -52,19 +118,60 @@
         }
       }
     ],
-    // git fixes this issue by automaticly change the brakeline type when pushing
-    "linebreak-style": "off",
-    "object-curly-spacing": "off",
-    "import/extensions": "off",
-    "import/no-unresolved": "off"
-  },
-  "overrides": [
-    {
-      "files": "**/test*.js",
-      "rules": {
-        "node/no-unpublished-require": "off",
-        "node/no-missing-require": "off"
+    "object-curly-newline": "off",
+    // disabling this rule because we have dynamically generated tests
+    "mocha/no-setup-in-describe": "off",
+    "react/jsx-tag-spacing": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx",
+          ".jsx"
+        ]
       }
-    }
-  ]
+    ],
+    "react/jsx-curly-brace-presence": "off",
+    // this fixes the jsx indent
+    "react/jsx-indent": [
+      2,
+      4
+    ],
+    "react/jsx-indent-props": [
+      2,
+      4
+    ],
+    //typescript can't deal with this
+    "react/static-property-placement": "off",
+    // I like the this.props syntax better
+    "react/destructuring-assignment": "off",
+    // sometimes it is necessary
+    "@typescript-eslint/ban-ts-comment": "off",
+    "unicorn/no-null": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "replacements": {
+          "q" : {
+            "query": true
+          },
+          "props": {
+            "properties": false
+          },
+          "prop": {
+            "property": false
+          }
+        }
+      }
+    ],
+    "no-await-in-loop": "off",
+    "no-continue": "off",
+    "camelcase": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "unicorn/prefer-node-protocol": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "unicorn/prefer-module": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
+  }
 }

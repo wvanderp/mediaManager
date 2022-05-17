@@ -1,28 +1,29 @@
 import fs from 'fs';
 import path from 'path';
 
-import * as R from 'ramda';
-
 import isImage from 'is-image';
 import isVideo from 'is-video';
 
 import sha1 from 'sha1';
-import { UploadEntry } from '../../../photolib-types/src/UploadFile';
+import UploadEntry  from '../../../mediaManager-types/UploadFile';
 
 
-const writeUploadFile = (data): void => {
-    console.log(data);
+function writeUploadFile  (data): void {
     const location = path.resolve(process.cwd(), './uploadFile.json');
-    fs.writeFileSync(location, JSON.stringify(data));
+    fs.writeFileSync(location, JSON.stringify(data, null, 4));
 };
 
-const scanDirectory = (directory: string): UploadEntry[] => {
+export function scanDirectory (directory: string): UploadEntry[]  {
     const location = path.resolve(__dirname, directory);
     const files = fs.readdirSync(location);
-    const fileList = R.map((r) => `${directory}\\${r}`, R.filter((r) => isImage(r) || isVideo(r), files));
+    const fileList = files
+    .filter((r) => isImage(r) || isVideo(r))
+    .map(
+        (r) => `${directory}\\${r}`
+    );
 
-    // todo: read modified time from filesystem
-    return R.map((r) => {
+    // TODO: read modified time from filesystem
+    return fileList.map((r) => {
         const fileStats = fs.statSync(r);
         return {
             fileName: path.basename(r),
@@ -32,11 +33,10 @@ const scanDirectory = (directory: string): UploadEntry[] => {
             lastModificationTime: fileStats.mtime.toISOString(),
             size: fileStats.size
         };
-    }, fileList);
+    });
 };
 
-const scan = (directory: string): void => {
+export default function scan (directory: string): void {
     writeUploadFile(scanDirectory(path.resolve(process.cwd(), directory)));
 };
 
-export default scan;

@@ -1,1 +1,66 @@
-[{"fileName":"Facebook_Angry_React.png","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"3680634a89f6b005ce676bd45c0a142f06ea22db"},{"fileName":"Facebook_default_female_avatar.gif","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"9ea9360c20cc4a9797e046767aeb809ad9e8b1c7"},{"fileName":"F_icon.svg","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"42e6efdcea5ce5a1f2ed2922d535de0231e004ec"},{"fileName":"Max_Verstappen_2016_Malaysia_1.jpg","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"ca51e34192d2a69fe3dc02c3bc6c2d786b49dfb6"},{"fileName":"Max_Verstappen_2016_Malaysia_1_Copy.jpg","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"ca51e34192d2a69fe3dc02c3bc6c2d786b49dfb6"},{"fileName":"Nidhogg_video_game_trailer.webm","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"a050dbf4d8f626320ec02749c2358aae1c3702c4"},{"fileName":"Nidhogg_video_game_trailer.webm.480p.ogv","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"135bf11580dac8fb73a9281323ff3a870c39f3dd"},{"fileName":"PANO_20170712_144704.jpg","filePath":"C:\\Users\\wouter\\Dropbox\\js\\photolib\\photoLib-cli\\test\\folder","hash":"e9db37d18a6ac4cb53c1e94f2b28bd93db859429"}]
+[
+    {
+        "fileName": "Facebook_Angry_React.png",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "3680634a89f6b005ce676bd45c0a142f06ea22db",
+        "creationTime": "2020-05-12T11:35:53.826Z",
+        "lastModificationTime": "2017-10-29T18:53:16.000Z",
+        "size": 3810
+    },
+    {
+        "fileName": "Facebook_default_female_avatar.gif",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "9ea9360c20cc4a9797e046767aeb809ad9e8b1c7",
+        "creationTime": "2020-05-12T11:29:18.203Z",
+        "lastModificationTime": "2017-10-29T18:53:21.000Z",
+        "size": 1291
+    },
+    {
+        "fileName": "F_icon.svg",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "42e6efdcea5ce5a1f2ed2922d535de0231e004ec",
+        "creationTime": "2020-05-12T11:26:42.968Z",
+        "lastModificationTime": "2017-10-29T18:53:12.000Z",
+        "size": 1024
+    },
+    {
+        "fileName": "Max_Verstappen_2016_Malaysia_1.jpg",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "ca51e34192d2a69fe3dc02c3bc6c2d786b49dfb6",
+        "creationTime": "2020-05-12T11:44:59.956Z",
+        "lastModificationTime": "2017-10-29T18:52:25.000Z",
+        "size": 576620
+    },
+    {
+        "fileName": "Max_Verstappen_2016_Malaysia_1_Copy.jpg",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "ca51e34192d2a69fe3dc02c3bc6c2d786b49dfb6",
+        "creationTime": "2020-05-12T11:44:59.944Z",
+        "lastModificationTime": "2017-10-29T18:52:25.000Z",
+        "size": 576620
+    },
+    {
+        "fileName": "Nidhogg_video_game_trailer.webm",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "a050dbf4d8f626320ec02749c2358aae1c3702c4",
+        "creationTime": "2020-05-12T11:46:56.264Z",
+        "lastModificationTime": "2017-10-29T19:07:58.000Z",
+        "size": 16861908
+    },
+    {
+        "fileName": "Nidhogg_video_game_trailer.webm.480p.ogv",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "135bf11580dac8fb73a9281323ff3a870c39f3dd",
+        "creationTime": "2020-05-12T11:46:54.566Z",
+        "lastModificationTime": "2017-10-29T19:09:19.000Z",
+        "size": 16688305
+    },
+    {
+        "fileName": "PANO_20170712_144704.jpg",
+        "filePath": "C:\\Users\\woute\\Dropbox\\js\\mediaManager\\mediaManager-cli\\tests\\folder",
+        "hash": "e9db37d18a6ac4cb53c1e94f2b28bd93db859429",
+        "creationTime": "2020-05-12T11:46:32.597Z",
+        "lastModificationTime": "2017-10-29T19:12:44.000Z",
+        "size": 8459650
+    }
+]

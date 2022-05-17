@@ -1,8 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { fetch } from 'node-fetch';
+import axios from 'axios';
 import FormData from 'form-data';
-import { UploadEntry } from '../../../photolib-types/src/UploadFile';
+import  UploadEntry  from '../../../mediaManager-types/UploadFile';
+
 
 const server = 'localhost:8000';
 
@@ -15,10 +16,7 @@ const upload = async (uploadFile) => {
         data.append('file', fs.createReadStream(`${job.filePath}\\${job.fileName}`));
         data.append('uploadFile', JSON.stringify(job));
 
-        const result = await fetch(`http://${server}/upload`, {
-            method: 'POST',
-            body: data
-        });
+        const result = await axios.post(`http://${server}/upload`, data);
 
         // todo: check results
     }
