@@ -174,5 +174,8 @@ fabric.properties
 
 #### custom
 ###########
-/photoLib-cli/uploadFile.json
-/photoLib-cli/config.json
+/mediaManager-cli/uploadFile.json
+/mediaManager-cli/config.json
+
+
+mediaManager-server/uploads/

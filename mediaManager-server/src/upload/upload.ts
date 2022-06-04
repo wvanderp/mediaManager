@@ -2,9 +2,6 @@ import express from 'express';
 import multer from 'multer';
 import fs from 'fs';
 
-import { MongoClient } from 'mongodb';
-
-import Storage from 'mediamanager-storage-local';
 import config from '../../config';
 
 const router = express.Router();
@@ -23,23 +20,12 @@ router.post('/', upload.single('file'), async (request, response) => {
 
     const file = fs.readFileSync(request.file.path);
 
-    const storage = new Storage({
-        path: config.storage.path
-    });
+    const fileHash = config.storage.storeBySha(file)
+    const uploadFileHash = config.storage.storeBySha(JSON.stringify(uploadFile))
 
-    console.log(uploadFile);
-    storage.storeSync(uploadFile.hash, file);
+    console.log(fileHash, uploadFileHash);
 
-    // ---------------------------
-    // into the db
-
-    const client = await MongoClient.connect(config.database.dbUrl);
-    const photosDB = client.db('photos');
-    const photosCollection = photosDB.collection('photos');
-
-    await photosCollection.insertOne(uploadFile);
-
-    response.send('');
+    response.send(uploadFileHash);
 });
 
 export default router;

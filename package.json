@@ -1,0 +1,20 @@
+{
+  "name": "mediamanager",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "upgradeWindows": "./upgrade.bat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvanderp/photolib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvanderp/photolib/issues"
+  },
+  "homepage": "https://github.com/wvanderp/photolib#readme"
+  
+}
