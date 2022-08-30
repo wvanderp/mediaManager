@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "upgradeWindows": "./upgrade.bat"
+    "upgradeWindows": "upgrade.bat"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,4 @@
     "url": "https://github.com/wvanderp/photolib/issues"
   },
   "homepage": "https://github.com/wvanderp/photolib#readme"
-  
 }

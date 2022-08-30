@@ -1,0 +1,8 @@
+{
+  "ignore": {
+    "inquirer": {
+      "versions": "",
+      "reason": "cant use es modals"
+    }
+  }
+}
