@@ -3,6 +3,14 @@
     "inquirer": {
       "versions": "",
       "reason": "cant use es modals"
+    },
+    "is-image": {
+      "versions": "4.0.0",
+      "reason": "cant handle es modals"
+    },
+    "is-video": {
+      "versions": "2.0.0",
+      "reason": "cant handel esm modals"
     }
   }
 }
