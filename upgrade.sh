@@ -14,6 +14,10 @@ cd ../mediaManager-ui
 npm-upgrade 
 npm i 
 
+cd ../mediaManager-dispatcher
+npm-upgrade 
+npm i 
+
 cd ../utils/mediaManager-storage-local
 npm-upgrade
 npm i 

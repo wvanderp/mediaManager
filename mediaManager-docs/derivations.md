@@ -22,17 +22,20 @@
 * Get the original name
 * Get file format
 * Ocr the image to get the text
-  * use special license plate ocr software
+  * use special license plate OCR software
 * Extract social data
   * File names can indicate social networks
   * Tag photos as WhatsApp or Facebook photos
 * Find similar images
   * Implement top shot to find the best photo
 * Extract embedded files
-* Use the stable defusing tagging algorithm to find tags
+* Use the stable diffusion tagging algorithm to find tags
+  * extract keywords with clip
+  * extract keywords with the danbooru tagger
 * Match photos that are taken at the same location
+* extract the stable diffusion prompt and settings from the photo
 
-## transformations
+## Transformations
 
 * Making a jpg preview for raw files
 * Make a thumbnail
