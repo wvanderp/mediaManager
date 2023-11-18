@@ -12,13 +12,13 @@
     "rusha": "^0.8.14"
   },
   "devDependencies": {
-    "@types/rusha": "^0.8.2",
-    "eslint": "^8.53.0",
+    "@types/rusha": "^0.8.3",
+    "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-chai-expect": "^3.0.0",
     "eslint-plugin-compat": "^4.2.0",
     "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-jsdoc": "^46.9.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-mocha": "^10.2.0",
