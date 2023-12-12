@@ -34,6 +34,7 @@
   * extract keywords with the danbooru tagger
 * Match photos that are taken at the same location
 * extract the stable diffusion prompt and settings from the photo
+* solving the camera for a video proving a path and direction for a video
 
 ## Transformations
 
