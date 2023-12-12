@@ -19,6 +19,7 @@
   * also check if the time is plausible
     * by checking locations
     * are those people in earlier photos
+  * extracting the time by ocr for embedded timestamps
 * Get the original name
 * Get file format
 * Ocr the image to get the text
