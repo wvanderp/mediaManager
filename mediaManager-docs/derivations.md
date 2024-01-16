@@ -28,14 +28,16 @@
   * File names can indicate social networks
   * Tag photos as WhatsApp or Facebook photos
 * Find similar images
-  * Implement top shot to find the best photo
+  * Implement a top shot to find the best photo
 * Extract embedded files
 * Use the stable diffusion tagging algorithm to find tags
   * extract keywords with clip
-  * extract keywords with the danbooru tagger
+  * extract keywords with the Danbooru tagger
 * Match photos that are taken at the same location
 * extract the stable diffusion prompt and settings from the photo
-* solving the camera for a video proving a path and direction for a video
+* Solving the camera for a video providing a path and direction for a video
+* check for embedded files in the file
+  * drawio files
 
 ## Transformations
 
